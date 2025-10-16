@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ServicesSection } from '@/components/ServicesSection';
@@ -7,17 +8,31 @@ import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { FloatingCTA } from '@/components/FloatingCTA';
+import { SectionDivider } from '@/components/SectionDivider';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
+      <SectionDivider variant="gradient" />
+      <div id="about">
+        <AboutSection />
+      </div>
+      <SectionDivider variant="wave" />
+      <div id="services">
+        <ServicesSection />
+      </div>
       <StatsSection />
-      <PortfolioSection />
+      <SectionDivider />
+      <div id="work">
+        <PortfolioSection />
+      </div>
+      <SectionDivider variant="gradient" />
       <TestimonialsSection />
-      <ContactSection />
+      <div id="contact">
+        <ContactSection />
+      </div>
       <Footer />
       <FloatingCTA />
     </div>

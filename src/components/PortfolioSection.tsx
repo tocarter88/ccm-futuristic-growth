@@ -62,9 +62,10 @@ export const PortfolioSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Our Work Speaks for Itself
           </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[hsl(var(--glow-primary))] to-[hsl(var(--glow-secondary))] mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Real results for real businesses across industries
           </p>

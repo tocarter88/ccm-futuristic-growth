@@ -56,9 +56,10 @@ export const ServicesSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
             What We Do
           </h2>
+          <div className="w-20 h-1 bg-primary-foreground/30 mx-auto mb-8 rounded-full" />
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
             Comprehensive marketing solutions tailored to accelerate your growth
           </p>

@@ -48,10 +48,11 @@ export const AboutSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Your Growth Partner
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <div className="w-20 h-1 bg-gradient-to-r from-[hsl(var(--glow-primary))] to-[hsl(var(--glow-secondary))] mx-auto mb-8 rounded-full" />
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
             CCM Growth Labs is a new marketing agency focused on helping other startups scale 
             affordably and effectively. We combine data-driven strategies with creative excellence 
             to deliver measurable results.

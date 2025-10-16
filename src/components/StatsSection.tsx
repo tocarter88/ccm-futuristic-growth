@@ -55,27 +55,34 @@ export const StatsSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-24 px-6 bg-[hsl(var(--section-light))]"
+      className="py-24 px-6 bg-gradient-to-b from-[hsl(var(--section-light))] to-[hsl(var(--background))] relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-accent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent rounded-full blur-3xl" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`text-center transition-all duration-1000 delay-${index * 100} ${
+              className={`text-center group transition-all duration-1000 delay-${index * 100} ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
               }`}
             >
-              <div className="relative">
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
+              <div className="relative p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-accent/50 transition-all duration-500 hover:shadow-glow hover:-translate-y-2">
+                <div className="text-5xl md:text-7xl font-display font-bold text-primary mb-3 group-hover:scale-110 transition-transform duration-500">
                   <span className="animate-count-up">
                     {counts[index]}
                   </span>
                   <span className="text-accent">{stat.suffix}</span>
                 </div>
-                <div className="text-muted-foreground text-sm md:text-base font-medium">
+                <div className="text-muted-foreground text-sm md:text-base font-medium uppercase tracking-wider">
                   {stat.label}
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             </div>
           ))}
