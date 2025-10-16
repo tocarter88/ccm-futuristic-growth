@@ -70,10 +70,14 @@ export const ServicesSection = () => {
             <div
               key={index}
               className={`group relative transition-all duration-700 delay-${index * 150} ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
               }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="relative bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full transition-all duration-500 hover:scale-105 hover:shadow-glow hover:-translate-y-2">
+              {/* RGB Glow Border */}
+              <div className="absolute -inset-0.5 bg-gradient-rgb opacity-0 group-hover:opacity-100 rounded-2xl blur transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
+              
+              <div className="relative bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full transition-all duration-500 hover:scale-105 hover:-translate-y-2">
                 {/* Icon with Gradient Background */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:animate-glow-pulse`}>
                   <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">

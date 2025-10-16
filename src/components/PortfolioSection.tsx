@@ -61,9 +61,15 @@ export const PortfolioSection = () => {
       className="py-32 px-6 bg-[hsl(var(--section-light))]"
     >
       <div className="max-w-7xl mx-auto">
-        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-          <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
-            Our Work Speaks for Itself
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
+          <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6 relative inline-block">
+            <span className="relative">
+              Our Work Speaks for Itself
+              {/* Reflection shine effect */}
+              <span className="absolute inset-0 overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/30 to-transparent skew-x-12 animate-shine" />
+              </span>
+            </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[hsl(var(--glow-primary))] to-[hsl(var(--glow-secondary))] mx-auto mb-8 rounded-full" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -76,9 +82,13 @@ export const PortfolioSection = () => {
             <div
               key={index}
               className={`group relative transition-all duration-700 delay-${index * 100} ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
               }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
+              {/* RGB Glow on hover */}
+              <div className="absolute -inset-0.5 bg-gradient-rgb opacity-0 group-hover:opacity-75 rounded-2xl blur-sm transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
+              
               <div className="relative overflow-hidden rounded-2xl bg-card shadow-lg hover:shadow-glow transition-all duration-500 hover:-translate-y-2">
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">

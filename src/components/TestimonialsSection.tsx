@@ -58,7 +58,7 @@ export const TestimonialsSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
           <h2 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
             Client Success Stories
           </h2>
@@ -72,10 +72,13 @@ export const TestimonialsSection = () => {
             <div
               key={index}
               className={`transition-all duration-700 delay-${index * 200} ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+                isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
               }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500 hover:shadow-glow">
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500 hover:shadow-rgb group relative">
+                {/* RGB glow effect on hover */}
+                <div className="absolute -inset-0.5 bg-gradient-rgb opacity-0 group-hover:opacity-50 rounded-2xl blur transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
                 {/* Rating Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (

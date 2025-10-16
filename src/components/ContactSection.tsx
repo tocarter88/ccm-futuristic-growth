@@ -54,7 +54,7 @@ export const ContactSection = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
           <h2 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-6">
             Let's Grow Together
           </h2>
@@ -65,7 +65,7 @@ export const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
