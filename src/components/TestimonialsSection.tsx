@@ -76,9 +76,9 @@ export const TestimonialsSection = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500 hover:shadow-rgb group relative">
-                {/* RGB glow effect on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-rgb opacity-0 group-hover:opacity-50 rounded-2xl blur transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
+              <div className="bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500 hover:shadow-rgb relative">
+                {/* RGB glow effect - always visible */}
+                <div className="absolute -inset-0.5 bg-gradient-rgb opacity-50 hover:opacity-75 rounded-2xl blur transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
                 {/* Rating Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (

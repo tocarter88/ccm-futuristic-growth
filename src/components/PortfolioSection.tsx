@@ -6,35 +6,35 @@ const projects = [
     title: "Forge Pixel",
     category: "Creative Studio",
     description: "Modern creative studio showcase with stunning visuals",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop&q=80",
     link: "https://forge-pixel.lovable.app/"
   },
   {
     title: "MindWave Zen",
     category: "Wellness Platform",
     description: "Calming meditation and mindfulness web experience",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80",
     link: "https://mindwave-zen.lovable.app/"
   },
   {
     title: "Ember Cafe",
     category: "Restaurant Website",
     description: "Cozy cafe website with warm, inviting design",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&auto=format&fit=crop&q=80",
     link: "https://ember-cafe.lovable.app/"
   },
   {
     title: "GrowBloom",
     category: "Growth Marketing",
     description: "Dynamic marketing platform for scaling businesses",
-    image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
     link: "https://growbloom.lovable.app/"
   },
   {
     title: "Neurology Lift",
     category: "Healthcare Platform",
     description: "Professional neurology clinic website with modern aesthetics",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
     link: "https://neurology-lift.lovable.app/"
   }
 ];
