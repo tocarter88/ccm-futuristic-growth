@@ -3,34 +3,39 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "E-Commerce Redesign",
-    category: "Website Development",
-    description: "Complete brand overhaul and conversion-optimized design",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop"
+    title: "Forge Pixel",
+    category: "Creative Studio",
+    description: "Modern creative studio showcase with stunning visuals",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop",
+    link: "https://forge-pixel.lovable.app/"
   },
   {
-    title: "SaaS Growth Campaign",
-    category: "Paid Advertising",
-    description: "3x lead generation through targeted Meta & Google Ads",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop"
+    title: "MindWave Zen",
+    category: "Wellness Platform",
+    description: "Calming meditation and mindfulness web experience",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop",
+    link: "https://mindwave-zen.lovable.app/"
   },
   {
-    title: "Local Business Boost",
-    category: "Social Media",
-    description: "Built engaged community and increased foot traffic 200%",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop"
+    title: "Ember Cafe",
+    category: "Restaurant Website",
+    description: "Cozy cafe website with warm, inviting design",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&auto=format&fit=crop",
+    link: "https://ember-cafe.lovable.app/"
   },
   {
-    title: "Startup Brand Identity",
-    category: "Branding",
-    description: "Complete brand system from logo to marketing materials",
-    image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&auto=format&fit=crop"
+    title: "GrowBloom",
+    category: "Growth Marketing",
+    description: "Dynamic marketing platform for scaling businesses",
+    image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&auto=format&fit=crop",
+    link: "https://growbloom.lovable.app/"
   },
   {
-    title: "Landing Page Optimization",
-    category: "Conversion Rate",
-    description: "Increased conversion rate by 150% through A/B testing",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop"
+    title: "Neurology Lift",
+    category: "Healthcare Platform",
+    description: "Professional neurology clinic website with modern aesthetics",
+    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop",
+    link: "https://neurology-lift.lovable.app/"
   }
 ];
 
@@ -79,9 +84,12 @@ export const PortfolioSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
-              className={`group relative transition-all duration-700 delay-${index * 100} ${
+              className={`group relative block transition-all duration-700 delay-${index * 100} ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -119,7 +127,7 @@ export const PortfolioSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
