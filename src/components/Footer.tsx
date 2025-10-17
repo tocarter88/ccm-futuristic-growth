@@ -1,4 +1,5 @@
 import { Linkedin, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 
@@ -48,29 +49,29 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Paid Advertising
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Website Development
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Brand Identity
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Social Media Growth
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/services" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   SEO Optimization
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -83,19 +84,19 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/about" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#work" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/portfolio" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Our Work
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
+                <Link to="/contact" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-primary-foreground/70 hover:text-accent transition-colors duration-300">

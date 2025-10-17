@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,9 +14,12 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const navItems = [
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/contact', label: 'Contact' }
+  ];
 
   return (
     <nav
@@ -26,23 +31,27 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div
-            className="font-display text-2xl font-bold text-primary-foreground cursor-pointer"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <Link
+            to="/"
+            className="font-display text-2xl font-bold text-primary-foreground cursor-pointer hover:opacity-90 transition-opacity"
           >
             CCM <span className="text-accent">Growth Labs</span>
-          </div>
+          </Link>
 
           <div className="hidden md:flex gap-8">
-            {['about', 'services', 'work', 'contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 capitalize relative group"
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 relative group ${
+                  location.pathname === item.path ? 'text-primary-foreground' : ''
+                }`}
               >
-                {item === 'work' ? 'Portfolio' : item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-              </button>
+                {item.label}
+                <span className={`absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`} />
+              </Link>
             ))}
           </div>
         </div>
