@@ -76,31 +76,34 @@ export const TestimonialsSection = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500 hover:shadow-rgb relative">
-                {/* RGB glow effect - always visible */}
-                <div className="absolute -inset-0.5 bg-gradient-rgb opacity-50 hover:opacity-75 rounded-2xl blur transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
-                {/* Rating Stars */}
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-
-                {/* Testimonial Content */}
-                <p className="text-primary-foreground/90 text-lg mb-8 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-
-                {/* Author Info */}
-                <div className="border-t border-primary-foreground/10 pt-6">
-                  <div className="font-bold text-primary-foreground text-lg">
-                    {testimonial.name}
+               <div className="group relative">
+                {/* RGB glow effect on hover only */}
+                <div className="absolute -inset-0.5 bg-gradient-rgb opacity-0 group-hover:opacity-75 rounded-2xl blur-sm transition-opacity duration-500 animate-border-flow bg-[length:200%_200%]" />
+                
+                <div className="relative bg-card/10 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 h-full hover:bg-card/20 transition-all duration-500">
+                  {/* Rating Stars */}
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
                   </div>
-                  <div className="text-accent text-sm">
-                    {testimonial.role}
-                  </div>
-                  <div className="text-primary-foreground/60 text-sm">
-                    {testimonial.company}
+
+                  {/* Testimonial Content */}
+                  <p className="text-primary-foreground/90 text-lg mb-8 leading-relaxed italic">
+                    "{testimonial.content}"
+                  </p>
+
+                  {/* Author Info */}
+                  <div className="border-t border-primary-foreground/10 pt-6">
+                    <div className="font-bold text-primary-foreground text-lg">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-accent text-sm">
+                      {testimonial.role}
+                    </div>
+                    <div className="text-primary-foreground/60 text-sm">
+                      {testimonial.company}
+                    </div>
                   </div>
                 </div>
               </div>

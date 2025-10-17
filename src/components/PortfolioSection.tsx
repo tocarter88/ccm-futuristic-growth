@@ -5,8 +5,8 @@ const projects = [
   {
     title: "Forge Pixel",
     category: "Creative Studio",
-    description: "Modern creative studio showcase with stunning visuals",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop&q=80",
+    description: "Digital architects crafting immersive experiences that blur reality and imagination",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80",
     link: "https://forge-pixel.lovable.app/"
   },
   {
@@ -25,9 +25,9 @@ const projects = [
   },
   {
     title: "GrowBloom",
-    category: "Growth Marketing",
-    description: "Dynamic marketing platform for scaling businesses",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+    category: "Natural Hair Care",
+    description: "Premium conditioners and natural hair care products brand",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop&q=80",
     link: "https://growbloom.lovable.app/"
   },
   {
