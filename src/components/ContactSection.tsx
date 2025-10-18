@@ -4,6 +4,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { z } from 'zod';
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
+  email: z.string().trim().email({ message: "Invalid email address" }).max(255, { message: "Email must be less than 255 characters" }),
+  company: z.string().trim().max(100, { message: "Company name must be less than 100 characters" }).optional(),
+  message: z.string().trim().min(10, { message: "Message must be at least 10 characters" }).max(2000, { message: "Message must be less than 2000 characters" })
+});
 
 export const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,6 +43,17 @@ export const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      toast({
+        title: "Validation Error",
+        description: result.error.errors[0].message,
+        variant: "destructive"
+      });
+      return;
+    }
+    
     toast({
       title: "Message sent!",
       description: "We'll get back to you within 24 hours.",
@@ -73,6 +92,7 @@ export const ContactSection = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="bg-card/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent"
+                  maxLength={100}
                   required
                 />
               </div>
@@ -83,6 +103,7 @@ export const ContactSection = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="bg-card/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent"
+                  maxLength={255}
                   required
                 />
               </div>
@@ -92,6 +113,7 @@ export const ContactSection = () => {
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   className="bg-card/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent"
+                  maxLength={100}
                 />
               </div>
               <div>
@@ -100,6 +122,7 @@ export const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-card/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-accent min-h-[150px]"
+                  maxLength={2000}
                   required
                 />
               </div>
