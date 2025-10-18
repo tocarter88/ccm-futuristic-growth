@@ -43,7 +43,7 @@ export const HeroSection = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 backdrop-blur-sm border border-accent/20 rounded-full mb-8 text-accent animate-slide-in-left">
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Award-Winning Marketing Agency</span>
+            <span className="text-sm font-medium">Marketing Agency</span>
           </div>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 tracking-tight leading-[1.1]">
             We grow new brands into{' '}
