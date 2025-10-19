@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Clients Helped' },
-  { value: 200, suffix: '+', label: 'Campaigns Run' },
-  { value: 3, suffix: 'x', label: 'Average Growth' },
-  { value: 98, suffix: '%', label: 'Client Satisfaction' }
+  { value: 3, suffix: '', label: 'Clients Helped' },
+  { value: 5, suffix: '', label: 'Campaigns Run' },
+  { value: 2.5, suffix: 'x', label: 'Average Growth' },
+  { value: 95, suffix: '%', label: 'Client Satisfaction' }
 ];
 
 export const StatsSection = () => {
@@ -27,18 +27,18 @@ export const StatsSection = () => {
             const increment = stat.value / steps;
             let current = 0;
 
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= stat.value) {
-                current = stat.value;
-                clearInterval(timer);
-              }
-              setCounts(prev => {
-                const newCounts = [...prev];
-                newCounts[index] = Math.floor(current);
-                return newCounts;
-              });
-            }, duration / steps);
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= stat.value) {
+                  current = stat.value;
+                  clearInterval(timer);
+                }
+                setCounts(prev => {
+                  const newCounts = [...prev];
+                  newCounts[index] = stat.suffix === 'x' ? parseFloat(current.toFixed(1)) : Math.floor(current);
+                  return newCounts;
+                });
+              }, duration / steps);
           });
         }
       },
