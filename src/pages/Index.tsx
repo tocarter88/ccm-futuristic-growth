@@ -3,8 +3,7 @@ import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { StatsSection } from '@/components/StatsSection';
-import { CaseStudiesSection } from '@/components/CaseStudiesSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { FeaturesShowcase } from '@/components/FeaturesShowcase';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { FloatingCTA } from '@/components/FloatingCTA';
@@ -24,8 +23,9 @@ const Index = () => {
         <ServicesSection />
       </div>
       <StatsSection />
+      <SectionDivider variant="gradient" />
+      <FeaturesShowcase />
       <SectionDivider />
-      <TestimonialsSection />
       <div id="contact">
         <ContactSection />
       </div>
