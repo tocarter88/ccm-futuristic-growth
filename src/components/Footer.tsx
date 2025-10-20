@@ -33,7 +33,7 @@ export const Footer = () => {
                 <Linkedin className="w-5 h-5 text-primary-foreground group-hover:text-primary-foreground" />
               </a>
               <a 
-                href="mailto:contact@ccmgrowthlabs.com"
+                href="mailto:carter@ccmgrowthlab.site"
                 className="w-10 h-10 rounded-lg bg-accent/20 hover:bg-accent flex items-center justify-center transition-all duration-300 hover:scale-110 group"
               >
                 <Mail className="w-5 h-5 text-primary-foreground group-hover:text-primary-foreground" />
@@ -134,7 +134,7 @@ export const Footer = () => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>(555) 123-4567</span>
+                <span>(408) 345-5881</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-accent" />

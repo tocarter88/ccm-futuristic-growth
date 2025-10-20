@@ -6,7 +6,6 @@ import { StatsSection } from '@/components/StatsSection';
 import { FeaturesShowcase } from '@/components/FeaturesShowcase';
 import { ProcessSection } from '@/components/ProcessSection';
 import { FAQSection } from '@/components/FAQSection';
-import { CTASection } from '@/components/CTASection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { FloatingCTA } from '@/components/FloatingCTA';
@@ -32,7 +31,7 @@ const Index = () => {
       <ProcessSection />
       <SectionDivider />
       <FAQSection />
-      <CTASection />
+      <SectionDivider />
       <div id="contact">
         <ContactSection />
       </div>

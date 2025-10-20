@@ -154,7 +154,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-primary-foreground/60 text-sm mb-1">Email</div>
-                    <div className="text-primary-foreground font-medium">contact@ccmgrowthlabs.com</div>
+                    <div className="text-primary-foreground font-medium">carter@ccmgrowthlab.site</div>
                   </div>
                 </div>
 
@@ -164,7 +164,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-primary-foreground/60 text-sm mb-1">Phone</div>
-                    <div className="text-primary-foreground font-medium">+1 (555) 123-4567</div>
+                    <div className="text-primary-foreground font-medium">(408) 345-5881</div>
                   </div>
                 </div>
 
